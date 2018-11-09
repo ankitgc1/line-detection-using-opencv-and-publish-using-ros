@@ -11,7 +11,7 @@ while(cap.isOpened()):
     edges = cv2.Canny(gray,50,150,apertureSize =3)
     lines = cv2.HoughLines(edges,1,np.pi/180,10)
     if lines is None:
-        contonous
+        continue
     else:
         for r,theta in lines[0]:
             a = np.cos(theta)
